@@ -1,27 +1,33 @@
 void setup() {
-  size(250, 250);  //feel free to change the size
+  size(500, 500);  //feel free to change the size
   noLoop(); //stops the draw() function from repeating
 }
 void draw() {
-for ( int y = 0; y < 260; y = y + 25){
-  for (int x = 0; x < 260; x = x + 25){
-     scale(x, y);
+  
+for ( int y = 0; y < 510; y = y + 50){
+  for (int x = 0; x < 510; x = x + 50){
+     scale(x, y); 
   }
 }
 }
-void scale(int x, int y){
+
+
+void scale(int x, int y){ 
+  float B = random(50,250);
+ for(int i = 0; i <100;i++){
+   fill(0, 20, B);
  
-  //int b= (int)(Math.random() *200)+20;
- // fill(0, 0, b);
-  fill(0, 38, 153);
-  ellipse(250-x,250-y,50, 50);
+  ellipse(500-x,500-y,100, 100); 
   //circle 2
-  fill(0, 64, 255);
-  ellipse(250-x, 250-y, 36, 36);
+  B = random(50,250);
+  fill(0, 20, B);
+  ellipse(500-x, 500-y, 72, 72);
   //circle 3
-  fill(77, 121, 255);
- ellipse(250-x, 250-y, 24, 24);
+ B = random(50,250);
+  fill(0, 20, B);
+  ellipse(500-x, 500-y, 48, 48);
  //circle 4
  fill(204, 217, 255);
- ellipse(250-x, 250-y, 12, 12);
+ ellipse(500-x, 500-y, 24, 24); 
+ }
 }
